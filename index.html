@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+	background-color: ;
+	font-size: 3em;
+	color: #009933;
+	font-family: sans-serif;
+	font-weight: 200;
+	margin: 2em;
+}
+h1 {
+	color: red;	
+
+	cursor: pointer red;
+	font-family: sans-serif;
+	text-align: center;
+
+}
+
+ul { list-style: none; }
+li { line-height: 1.5em; }
+a { transition: all 0.1s ease-in-out; }
+a:link, a:visited{
+	color: blue;
+}
+a:hover, a:active {
+	color: red;
+	font-weight: 800;
+}
+img { display: none; }
+
+li:hover img {
+	display: inline-block;
+	vertical-align: middle
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<h1>Lukas's Webpage</h1>
+
+<p>These are Minecraft recipes
+by lukas baxter.
+
+</p>
+
+<a href="https://minecraft.net/en-us/download/">Download and play!</a>
+
+<!-- this is the big list of recipes -->
+<ul id="recipes">
+<li>TEST</li>
+</ul>
+
+
+<script>
+	var recipes = [
+		['Anvil', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/dd/Anvil.png?version=6a752a61a58b19ebb9786efd3c0348b3'],
+		['Arrow', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/4/41/Arrow.png?version=cdbf2a253ba53effe6e52e0d78983aeb'],
+		['Axe',   'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/1/11/Wooden_Axe.png?version=5e70eb5ff667ad1215d3b5312638998e'],
+		['Bed' ,  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/6/65/Blue_Bed.png?version=07207de8477b4e81c9ef7b140f6230f6'],
+		['Book and Quill', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/b/ba/Book_and_Quill.png?version=2433f317513841f18aabdb41f8112257'],
+		['Book',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/f/f3/Book.png?version=14fa68ec3e085c005825876d367934e3'],
+		['Bookshelf','https://hydra-media.cursecdn.com/minecraft.gamepedia.com/f/f7/Bookshelf.png?version=8dacce1b38ad18be79491d039eae2a38'],
+		['Bread',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/e/e1/Bread.png?version=ac6a24011c728eba04dc91f38b3a288f'],
+		['Brewing stand', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/f/fa/Brewing_Stand.png?version=2dc9b986ad979b92974c31f70f47e19f'],
+		['Crafting table','https://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/d4/Crafting_Table.png?version=2534cbea4b74afd2f5f26da77e8983fc'],
+		['Door',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/2/2c/Wooden_Door.png?version=f1221857d48d23e55f5abfd02fb9de4e'],
+		['Enchantment table',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/c/ca/Enchantment_Table.png?version=715c7d68d5a1cc4b3482ad36ba0aeecc'],
+		['Fence Gate',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/c/ca/Oak_Fence_Gate_%28Closed%29.png?version=187ef0196d0cd6d8c4db0af483fec508'],
+		['Fence', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0c/Oak_Fence.png?version=2dc462db3f7509634e49e9d9d5636f85'],
+		['flint and Steel',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/7/7e/Flint_and_Steel.png?version=4f0997784531cace38645318ff05728b'],
+		['Furnace',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/4/4b/Furnace_%28Active%29.png?version=e4330fd500424405d50ba787e30c8d95'],
+		['Golden apple', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0e/Golden_Apple.png?version=8c25d71c45c2167eb024419905fd340b'],
+		'Hoe',
+		'Jukebox',
+		'Ladder',
+		'Lever',
+		'Lingering Potion',
+		'Minecart',
+		'Note Block',
+		'Pickaxe',
+		'Powered Rail',
+		'Pressure Plate',
+		'Rail',
+		'Redstone Lamp',
+		'Redstone Repeater',
+		'Redstone Torch',
+		'Shears',
+		'Stick',
+		'Sword',
+		'Torch',
+		'Trapdoor',
+		'Tripwire Hook',
+		'Wood Planks',
+		'Cake',
+		'Brick',
+		'Shield',
+		['Armor', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/5/5a/Armorc.png?version=f19270f9cfd2cf96d4bd388425bfe95b'],
+		['Bowl', 'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/9/9c/Bowl.png?version=210f411635b8cd5da76472127b3da099'],
+
+		'Wool',
+		'Crafting/Dye',
+		['Banner',  'https://hydra-media.cursecdn.com/minecraft.gamepedia.com/b/b6/Orange_Banner.png?version=b110fdd588bfa43855e36f2c076e3f18'],
+		'Diamond',
+		'Slime',
+		'Item Frame',
+		'Leather',
+		'Paper',
+		'Horse Armor',
+		'Ender Chest',
+		'Eye of Ender',
+		'End portal',
+		'Iron Golem',
+		'Piston',
+
+
+
+]
+		
+
+	function showRecipes(recipes) {
+		let ul = document.getElementById('recipes');
+		ul.innerHTML = recipes.sort().map((maybe_pair, index) =>
+			{
+				let name, url
+				if (typeof maybe_pair != 'string') {
+					name = maybe_pair[0]
+					url = maybe_pair[1]
+				} else {
+					name = maybe_pair
+				}
+				return `<li>${index + 1}. ${url ? '<img src="'+url+'" />' : ''} <a href="http://minecraft.gamepedia.com/${name}">${name}</a></li>`
+			}
+		).join('\n');
+	}
+
+	showRecipes(recipes);
+</script>
+
+</body>
+</html>
