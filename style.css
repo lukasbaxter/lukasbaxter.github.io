@@ -1,0 +1,45 @@
+
+body {
+	background-color:black;
+	background-image: url(https://lh3.googleusercontent.com/-CN9UW2dQ5Sc/VPoHL5dKT3I/AAAAAAAAANc/pIFqJy1Mkhg/s256-no/Random+TNT.png);
+	background-repeat: no-repeat;
+	/*background-position: 100px 100px;*/
+	font-size: 3em;
+	color: #009933;
+	font-family: sans-serif;
+	font-weight: 200;
+	margin: 2em;
+	animation: tnt 2s infinite;
+	animation-timing-function: linear;
+
+}
+
+@keyframes tnt {
+	from {background-position: 1000px 1000px;}
+	to {background-position: 0px 0px;}
+}
+h1 {
+	color: red;	
+
+	cursor: pointer red;
+	font-family: sans-serif;
+	text-align: center;
+
+}
+
+ul { list-style: none; }
+li { line-height: 1.5em; }
+a { transition: all 0.1s ease-in-out; }
+a:link, a:visited{
+	color: blue;
+}
+a:hover, a:active {
+	font-weight: ;	color: yellow;
+}
+img { display: none; }
+
+li:hover img {
+	display: inline-block;
+	vertical-align: middle
+}
+
