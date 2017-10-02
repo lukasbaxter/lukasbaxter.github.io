@@ -1,4 +1,9 @@
 
+#logo {
+	width: 60%;
+	margin: auto;
+}
+
 body {
 	background-color:black;
 	background-image: url(https://lh3.googleusercontent.com/-CN9UW2dQ5Sc/VPoHL5dKT3I/AAAAAAAAANc/pIFqJy1Mkhg/s256-no/Random+TNT.png);
@@ -36,7 +41,7 @@ a:link, a:visited{
 a:hover, a:active {
 	font-weight: ;	color: yellow;
 }
-img { display: none; }
+img.recipe { display: none; }
 
 li:hover img {
 	display: inline-block;
