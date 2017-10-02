@@ -55,7 +55,7 @@ var recipes = [
 	['Iron Golem', 'https://minecraft.gamepedia.com/media/minecraft.gamepedia.com/c/c9/Village_Golem.png?version=0b364a1ba6acf27869c3e8cb8954fad7'],
 	['Piston', 'https://minecraft.gamepedia.com/media/minecraft.gamepedia.com/d/d4/Piston.gif?version=3b4f66ee13624444dc6ba4156db33e66'],
 	['Potion', 'https://minecraft.gamepedia.com/media/minecraft.gamepedia.com/a/a6/Potions.gif?version=82b9270d89f0f6e27dfd8af51c3f8aff'],
-	
+
 
 
 
@@ -73,7 +73,7 @@ function showRecipes(recipes) {
 			} else {
 				name = maybe_pair
 			}
-			return `<li>${index + 1}. ${url ? '<img class="recipe" src="'+url+'" />' : ''} <a href="http://minecraft.gamepedia.com/${name}">${name}</a></li>`
+			return `<li>${index + 1}. <a href="http://minecraft.gamepedia.cosm/${name}">${name}</a> ${url ? '<img class="recipe" src="'+url+'" />' : ''}</li>`
 		}
 	).join('\n');
 }

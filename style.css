@@ -2,6 +2,7 @@
 #logo {
 	width: 60%;
 	margin: auto;
+	display: block;
 }
 
 body {
@@ -45,6 +46,8 @@ img.recipe { display: none; }
 
 li:hover img {
 	display: inline-block;
-	vertical-align: middle
+	vertical-align: bottom;
+	max-width: 200px;
+	max-height: 200px;
 }
 
