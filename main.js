@@ -73,7 +73,7 @@ function showRecipes(recipes) {
 			} else {
 				name = maybe_pair
 			}
-			return `<li>${index + 1}. <a href="http://minecraft.gamepedia.cosm/${name}">${name}</a> ${url ? '<img class="recipe" src="'+url+'" />' : ''}</li>`
+			return `<li>${index + 1}. <a href="http://minecraft.gamepedia.com/${name}">${name}</a> ${url ? '<img class="recipe" src="'+url+'" />' : ''}</li>`
 		}
 	).join('\n');
 }
